@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercícios 7.3</title>
+    <!-- CSS -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      h2{
+          color: rgb(11, 180, 25);
+      }
+
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 90%;
+        height: 100px;
+        border: 1px solid red;
+        margin-bottom: 10px;
+        padding: 5px;
+      }
+      .flex-direction__column {
+        flex-direction: column;
+      }
+      .justify-content__space-between {
+        justify-content: space-between;
+      }
+      .justify-content__center {
+        justify-content: center;
+      }
+      .align-items__flex-start {
+        align-items: flex-start;
+      }
+      .automatic-box-height {
+        height: auto;
+      }
+      .ball {
+        border-radius: 100%;
+      }
+      .green {
+        background-color: green;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .blue1 {
+          background-color: white;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .black {
+        background-color: black;
+      }
+      .medium {
+        width: 50px;
+        height: 50px;
+      }
+      #exercise-6-square{
+        transform: rotate(90deg)
+      }
+      #exercise-1 {
+        animation-duration: 3s;
+        animation-name: deslizarTresSeg;
+        animation-delay: 1s;
+      }
+      @keyframes deslizarTresSeg {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+
+      #exercise-2 {
+        animation-duration: 2s;
+        animation-name: deslizarDoisSeg;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes deslizarDoisSeg {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+
+      #exercise-3 {
+        animation-duration: 3s;
+        animation-name: deslizarVaiVolta;
+        animation-delay: 1s;
+      }
+      @keyframes deslizarVaiVolta {
+        0% {
+          margin-left: 0%;
+        }
+        25% {
+          margin-left: 90%;
+        }
+        75% {
+          margin-right: 0%;
+        }
+        100% {
+          margin-right: 90%;
+        }
+      }
+
+      #exercise-4:hover {
+        animation-name: deslizarmouserover;
+        animation-duration: 15s;
+      }
+      @keyframes deslizarmouserover {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+
+      #exercise-7 {
+        animation: crescer 10s infinite;
+      }
+      @keyframes crescer {
+        0% {
+          width: 50px;
+          height: 50px;
+        }
+        100% {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      #exercise-8 {
+        animation: cor 4s infinite;
+      }
+      @keyframes cor {
+        from {
+          background-color: red;
+        }
+        to {
+          background-color: yellow;
+        }
+      }
+
+      #exercise-9 {
+        animation: corInversa 4s infinite;
+      }
+      @keyframes corInversa {
+        0% {
+          background-color: red;
+        }
+        15% {
+          background-color: yellow;
+        }
+        30% {
+          background-color: blue;
+        }
+        45% {
+          background-color: green;
+        }
+        60% {
+          background-color: green;
+        }
+        75% {
+          background-color: blue;
+        }
+        90% {
+          background-color: yellow;
+        }
+        100% {
+          background-color: red;
+        }
+      }
+
+      #exercise-10 {
+        animation: seteNove 4s infinite;
+      }
+      @keyframes seteNove {
+        from {
+          background-color: red;
+          width: 50px;
+          height: 50px;
+        }
+        to {
+          background-color: yellow;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      #exercise-11_1 {
+        animation: last1 3s infinite;
+        animation-delay: 2s;
+        animation-timing-function: linear;
+      }
+      #exercise-11_2 {
+        animation: last2 3s infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease;
+      }
+      #exercise-11_3 {
+        animation: last3 3s infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease-in;
+      }
+      #exercise-11_4 {
+        animation: last4 3s infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease-out;
+      }
+      #exercise-11_5 {
+        animation: last5 3s infinite;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes last1 {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+      @keyframes last2 {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+      @keyframes last3 {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+      @keyframes last4 {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+      @keyframes last5 {
+        from {
+          margin-left: 0%;
+        }
+        to {
+          margin-left: 90%;
+        }
+      }
+    </style>
+
+    <!-- HTML -->
+  </head>
+  <body>
+    <ol>
+      <li>
+        <section>
+          <img src="/img/nuvem.png" id="exercise-1" class="ball green medium"></div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <img src="/img/missil.png" id="exercise-2" class=" medium"></div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <img src="/img/bola.png" id="exercise-3" class=" medium"></div>
+        </section>
+      </li>
+      <li>
+        <section>
+          <img src="/img/turtle.png"
+            id="exercise-4"
+            class="medium"
+            onmouseover="move()"
+          ></div>
+        </section>
+      </li>
+      <li>
+        <section id="section-5">
+          <h2 id="exercise-5" class=" medium">Trybe</h2>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__space-between">
+          <img src="/img/poubelle.png" id="exercise-6-square" class=" medium" class="blue1"></div>
+          <img src="/img/Gina.png" id="exercise-6" class=" medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-7" class="blue medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-8" class="red medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-9" class="red medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-10" class="red medium"></div>
+        </section>
+      </li>
+      <li>
+        <section
+          class="flex-direction__column align-items__flex-start automatic-box-height"
+        >
+          <img src="img/car1.png" id="exercise-11_1" class="red medium"></div>
+          <img src="img/car2.png" id="exercise-11_2" class="blue medium"></div>
+          <img src="img/car3.png" id="exercise-11_3" class="green medium"></div>
+          <img src="img/car4.png" id="exercise-11_4" class="yellow medium"></div>
+          <img src="img/car5.png" id="exercise-11_5" class="black medium"></div>
+        </section>
+      </li>
+      <li>
+        <section class="justify-content__center">
+          <div id="exercise-12" class="black medium"></div>
+        </section>
+      </li>
+    </ol>
+    <script>
+      function move() {
+        const circle4 = document.getElementById("exercise-4");
+        circle4.style.animationDuration = "5";
+      }
+
+      const section5 = document.querySelector("#section-5");
+      const exerc5 = document.querySelector("#exercise-5");
+      section5.addEventListener("mouseover", function () {
+        exerc5.style.animation = "deslizarmouserover 5000ms";
+      });
+
+      const square = document.querySelector("#exercise-6-square");
+      const circle = document.querySelector("#exercise-6");
+
+      square.addEventListener("mouseover", function () {
+        circle.style.zindex = 1;
+        square.style.position = "absolute";
+        circle.style.animation = "deslizarmouserover 5000ms linear reverse";
+      });
+
+      //   function disappear() {
+      //     const circle12 = document.getElementById("exercise-12");
+      //     console.log("funciona");
+      //     circle12.style.backgroundColor="red";
+      //     circle12.style.animationDuration = "1";
+      //     circle12.style.animation = "sumir";
+      //   }
+
+      const exerc12 = document.querySelector("#exercise-12");
+      exerc12.addEventListener("mousedown", function () {
+        console.log("funciona");
+        // exerc12.style.animation = "5s";
+        exerc12.style.backgroundColor = "white";
+        exerc12.style.animationDuration = "50000ms";
+      });
+    </script>
+  </body>
+</html>
